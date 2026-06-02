@@ -2,6 +2,15 @@
 
 这是一个**纯静态 HTML/CSS/JS** 原型，不依赖后端服务。可直接双击 `index.html` 打开，或放到任意静态托管（Nginx/GitHub Pages/对象存储静态站点）使用。
 
+## 正式公网访问（推荐）
+
+考虑到部分网络环境无法稳定访问 `github.io`，且 jsDelivr 会把 `index.html` 作为 `text/plain` 返回导致浏览器显示源码，默认正式访问地址改为 GitHubRaw CDN：
+
+- 主地址（跟随 `main` 最新内容）：`https://cdn.githubraw.com/Marvin1259/ai-treasure-web/main/index.html`
+- 固定版本地址（锁定 commit）：`https://cdn.githubraw.com/Marvin1259/ai-treasure-web/cb483811a9566aece5f543f30bf256bf6d87b6fe/index.html`
+
+如需在飞书卡片或机器人消息中放入口，优先使用主地址；需要变更冻结或回溯时使用固定版本地址。
+
 ## 已实现模块
 
 - 首页：活动 banner、玩法说明、积分规则、每周挑战、AI 工具清单、奖励机制
