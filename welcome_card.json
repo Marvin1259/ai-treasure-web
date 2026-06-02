@@ -1,0 +1,104 @@
+{
+  "config": {
+    "wide_screen_mode": true,
+    "enable_forward": true
+  },
+  "header": {
+    "template": "blue",
+    "title": {
+      "tag": "plain_text",
+      "content": "🚀 建群启动｜兄弟激励计划"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "一键参与，快速拿积分"
+    }
+  },
+  "elements": [
+    {
+      "tag": "img",
+      "img_key": "img_v3_0212a_4b015baf-cc01-4c9b-9046-45f50859f2dg",
+      "alt": {
+        "tag": "plain_text",
+        "content": "兄弟激励计划启动海报"
+      },
+      "mode": "fit_horizontal",
+      "compact_width": false
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**活动已启动**  \n提交真实案例、参与每周挑战、共享高潜项目，积分持续累加。"
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "tag": "div",
+      "fields": [
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**⚡ 3分钟提交**\n流程极简，手机可完成"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**🏅 +50 有效案例**\n高质量提交直拿积分"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**🔥 每周挑战 +20**\n固定节奏，稳定拉升"
+          }
+        },
+        {
+          "is_short": true,
+          "text": {
+            "tag": "lark_md",
+            "content": "**💡 好项目推荐**\n优秀案例进入精选池"
+          }
+        }
+      ]
+    },
+    {
+      "tag": "note",
+      "elements": [
+        {
+          "tag": "lark_md",
+          "content": "📌 路径：打开活动入口 → 提交案例 → 群内同步进展与榜单。"
+        }
+      ]
+    },
+    {
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "立即提交案例"
+          },
+          "type": "primary",
+          "url": "https://detector-brother-incentives-tribute.trycloudflare.com"
+        },
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "查看活动说明"
+          },
+          "type": "default",
+          "url": "https://detector-brother-incentives-tribute.trycloudflare.com"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水滴AI挖宝行动（静态原型）</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>水滴AI挖宝行动</h1>
+      <p class="subtitle">无后端静态原型 · 基于飞书多维表格链接接入</p>
+      <nav class="top-nav" aria-label="主导航">
+        <button class="nav-btn active" data-page="home">首页</button>
+        <button class="nav-btn" data-page="submit">提交页</button>
+        <button class="nav-btn" data-page="points">积分页</button>
+        <button class="nav-btn" data-page="treasure">挖宝专区</button>
+        <button class="nav-btn" data-page="admin">管理员页</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="global-config-hint" class="notice warning hidden"></section>
+
+    <section id="page-home" class="page active">
+      <div class="hero card">
+        <h2>一起挖宝，让 AI 成为团队新生产力</h2>
+        <p>提交实战案例、分享工具和踩坑经验，积累积分冲榜，赢取周/月度奖励。</p>
+        <a id="hero-submit-link" class="btn primary" href="#" target="_blank" rel="noopener">立即提交挖宝成果</a>
+      </div>
+
+      <div class="grid two-col">
+        <article class="card">
+          <h3>玩法说明</h3>
+          <ul>
+            <li>每位同学可随时提交 AI 使用案例。</li>
+            <li>管理员审核后计入积分和精选内容。</li>
+            <li>积分每日刷新，榜单展示变化趋势。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>积分规则</h3>
+          <ul>
+            <li>基础提交：+5 分</li>
+            <li>高质量可复用方案：+10 分</li>
+            <li>精选案例入选：+20 分</li>
+            <li>踩坑复盘被采纳：+8 分</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>每周挑战</h3>
+          <p>本周主题：用 AI 提效「日报周报」「需求澄清」「数据分析」任一场景。</p>
+        </article>
+        <article class="card">
+          <h3>AI 工具清单</h3>
+          <div class="chips">
+            <span class="chip">Cursor</span>
+            <span class="chip">ChatGPT</span>
+            <span class="chip">Claude</span>
+            <span class="chip">Gemini</span>
+            <span class="chip">飞书妙记</span>
+            <span class="chip">飞书多维表格</span>
+          </div>
+        </article>
+      </div>
+
+      <article class="card">
+        <h3>奖励机制</h3>
+        <ul>
+          <li>周榜 Top 3：团队内通报 + 专属勋章</li>
+          <li>月榜 Top 10：实物礼品/学习基金</li>
+          <li>年度榜优胜：AI 共创项目优先参与资格</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="page-submit" class="page">
+      <article class="card">
+        <h2>提交挖宝成果</h2>
+        <p>请按提交类型填写案例，推荐包含背景、做法、提示词/流程、结果和复盘。</p>
+        <div class="submit-types">
+          <span class="chip">效率提升案例</span>
+          <span class="chip">提示词模板</span>
+          <span class="chip">自动化流程</span>
+          <span class="chip">踩坑复盘</span>
+          <span class="chip">团队共创成果</span>
+        </div>
+        <div id="submit-entry"></div>
+      </article>
+    </section>
+
+    <section id="page-points" class="page">
+      <div class="grid two-col">
+        <article class="card">
+          <h2>我的积分（占位）</h2>
+          <div id="my-points" class="stat-block"></div>
+        </article>
+        <article class="card">
+          <h2>刷新信息</h2>
+          <p id="refresh-time"></p>
+          <p class="muted">建议由飞书多维表格公式/自动化每日生成快照后同步到本地 JSON。</p>
+        </article>
+      </div>
+
+      <div class="grid two-col">
+        <article class="card">
+          <h3>本月榜</h3>
+          <div id="monthly-board" class="table-wrap"></div>
+        </article>
+        <article class="card">
+          <h3>年度榜</h3>
+          <div id="yearly-board" class="table-wrap"></div>
+        </article>
+      </div>
+
+      <article class="card">
+        <h3>积分明细样例</h3>
+        <div id="points-details" class="table-wrap"></div>
+      </article>
+    </section>
+
+    <section id="page-treasure" class="page">
+      <h2>挖宝专区</h2>
+      <div class="grid three-col">
+        <article class="card treasure">
+          <h3>同事发现了什么</h3>
+          <p>收录近期最有启发的 AI 实战发现，关注业务价值和复用性。</p>
+          <div id="discover-feed" class="stack"></div>
+        </article>
+        <article class="card treasure">
+          <h3>抄作业区</h3>
+          <p>一键复用的提示词模板、流程脚本和 SOP。</p>
+          <div id="copy-feed" class="stack"></div>
+        </article>
+        <article class="card treasure">
+          <h3>踩坑联盟</h3>
+          <p>记录失败尝试和修复方案，帮团队少走弯路。</p>
+          <div id="pitfall-feed" class="stack"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="page-admin" class="page">
+      <h2>管理员入口</h2>
+      <p class="muted">管理员页仅做入口聚合，真实管理通过飞书多维表格 Base/视图完成。</p>
+      <div id="admin-cards" class="grid three-col"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 水滴AI挖宝行动 · 静态原型</p>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

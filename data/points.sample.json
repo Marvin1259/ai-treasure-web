@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "source": "local-json-sample",
+    "refreshedAt": "2026-06-02 09:30",
+    "refreshNote": "由飞书多维表格每日快照导出"
+  },
+  "me": {
+    "name": "张三（示例）",
+    "team": "西南大区",
+    "points": 126,
+    "rankMonthly": 9,
+    "rankYearly": 14,
+    "rankDelta": 3
+  },
+  "monthlyBoard": [
+    { "rank": 1, "name": "李一", "team": "华东一分区", "points": 248, "delta": 2 },
+    { "rank": 2, "name": "王二", "team": "华南二分区", "points": 236, "delta": -1 },
+    { "rank": 3, "name": "赵三", "team": "华北一分区", "points": 225, "delta": 1 },
+    { "rank": 4, "name": "陈四", "team": "西南大区", "points": 220, "delta": 0 },
+    { "rank": 5, "name": "周五", "team": "西南大区", "points": 214, "delta": 1 }
+  ],
+  "yearlyBoard": [
+    { "rank": 1, "name": "何一", "team": "华东二分区", "points": 1620, "delta": 0 },
+    { "rank": 2, "name": "吕二", "team": "华北二分区", "points": 1580, "delta": 1 },
+    { "rank": 3, "name": "钱三", "team": "西南大区", "points": 1505, "delta": -1 },
+    { "rank": 4, "name": "孙四", "team": "华南一分区", "points": 1480, "delta": 2 },
+    { "rank": 5, "name": "吴五", "team": "西南大区", "points": 1462, "delta": 0 }
+  ],
+  "pointDetails": [
+    {
+      "date": "2026-06-01",
+      "type": "精选案例",
+      "title": "AI 协助标准化周报生成",
+      "points": 20,
+      "status": "已核定"
+    },
+    {
+      "date": "2026-05-30",
+      "type": "踩坑复盘",
+      "title": "多轮提示词导致结果漂移的修复",
+      "points": 8,
+      "status": "已核定"
+    },
+    {
+      "date": "2026-05-29",
+      "type": "基础提交",
+      "title": "客服话术润色模板",
+      "points": 5,
+      "status": "待复核"
+    }
+  ],
+  "treasure": {
+    "discoveries": [
+      {
+        "title": "会议纪要 10 分钟产出模板",
+        "summary": "把飞书妙记内容自动整理成行动清单。"
+      },
+      {
+        "title": "数据分析提问框架",
+        "summary": "固定四段式提问，显著提高结果稳定性。"
+      }
+    ],
+    "copyArea": [
+      {
+        "title": "周报生成提示词",
+        "summary": "输入原始工作记录，自动输出结构化周报。"
+      },
+      {
+        "title": "复盘模板",
+        "summary": "统一问题描述、原因、行动和结果追踪格式。"
+      }
+    ],
+    "pitfalls": [
+      {
+        "title": "直接复制公开提示词效果差",
+        "summary": "未加入团队上下文会导致结果不可用。"
+      },
+      {
+        "title": "忽略输出约束导致超长文本",
+        "summary": "补充字数与格式限制可明显提升可读性。"
+      }
+    ]
+  }
+}
